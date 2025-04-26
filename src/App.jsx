@@ -14,8 +14,9 @@ import "antd/dist/reset.css";
 import MyTickets from "pages/MyTickets";
 import AdminDashboard from "pages/Admin/AdminDashboard";
 import AdminLogin from "pages/Admin/AdminLogin";
+import Blog from "pages/Blog";
 
-const API_BASE = "http://localhost:4000";
+const API_BASE = "http://localhost:5173";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -54,6 +55,7 @@ function App() {
           <Route path="register" element={<UserRegister />} />
           <Route path="admin" element={<AdminDashboard />} />
           <Route path="admin-login" element={<AdminLogin />} />
+          <Route path="blog" element={<Blog/>} />
           <Route
             path="login"
             element={

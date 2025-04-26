@@ -15,6 +15,7 @@ const ImageUpload = ({ onUpload }) => {
         const fileUrl = await uploadFile(file, filePath);
         onUpload(fileUrl);
         console.log("file uploaded successfully");
+        message.success("File uploaded successfully");
       }
     } catch (error) {
       message.error("Error updloading file");

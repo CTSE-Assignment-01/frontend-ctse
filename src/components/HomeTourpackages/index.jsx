@@ -3,13 +3,16 @@ import { Text, Heading, Img } from "./..";
 
 export default function HomeTourpackages({ destination }) {
   return (
-    <div>
+    <div className="flex-1 bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl md:min-w-[300px] sm:min-w-full sm:mb-6"
+      onClick={() => {
+        window.location.href = `/blog`;
+      }} >
       <Img
         src={destination?.imageUrl}
         alt="image"
-        className="h-[404px] w-full rounded-[24px] object-cover md:h-auto"
+        className="w-full rounded-[24px] object-cover md:h-auto"
       />
-      <div className="flex flex-col items-start gap-[11px] self-stretch">
+      <div className="flex flex-col items-start gap-[11px] self-stretch px-8 py-3">
         <Heading size="lg" as="h1" className="text-center">
           {destination?.name}
         </Heading>

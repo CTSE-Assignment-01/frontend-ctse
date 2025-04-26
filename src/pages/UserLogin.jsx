@@ -9,6 +9,8 @@ const UserLogin = ({ loggedIn, setLoggedIn }) => {
   const navigate = useNavigate();
   console.log(loggedIn);
 
+  const API_BASE = "http://localhost:5173";
+
   const loginUser = async () => {
     const user = {
       email: email,

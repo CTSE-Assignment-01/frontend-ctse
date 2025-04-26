@@ -23,11 +23,42 @@ export default function HomePage() {
   }, []);
   return (
     <>
-      <Helmet>
-        <title>Train Ticket Management System</title>
-        <meta name="description" content="Train ticket management system" />
-      </Helmet>
-      <div className="flex w-full flex-col gap-[50px] bg-white-A700 pt-[123px] md:pt-5">
+      <nav className="bg-white shadow-md fixed w-full z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16">
+            <div className="flex">
+              <div className="flex-shrink-0 flex items-center">
+                <a href="/" className="flex items-center">
+                  <span className="font-bold text-xl text-blue-600">Sri Lanka Railways</span>
+                </a>
+              </div>
+              <div className="ml-6 flex space-x-8">
+                <a href="/" className="inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                  Home
+                </a>
+                <a href="/blog" className="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium text-gray-900">
+                  Blog
+                </a>
+                <a href="/destinations" className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                  Destinations
+                </a>
+                <a href="/about" className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                  About Us
+                </a>
+                <a href="/contact" className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                  Contact
+                </a>
+              </div>
+            </div>
+            <div className="ml-6 flex items-center">
+              <a href="/login" className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                Sign In
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div className="flex w-full flex-col gap-[50px] bg-white-A700 ">
         <div className="flex flex-col items-center gap-[133px] md:gap-[99px] sm:gap-[66px]">
           <div className="h-[915px] self-stretch bg-[url(/public/images/main_bg.jpg)] bg-cover bg-no-repeat md:h-auto">
             <div className="flex justify-center bg-black-900_63 px-14 py-[227px] md:p-5">
@@ -217,6 +248,11 @@ export default function HomePage() {
                     <a href="Home" target="_blank" rel="noreferrer">
                       <Heading as="h6" className="!text-white-A700">
                         Home
+                      </Heading>
+                    </a>
+                    <a href="blog" target="_blank" rel="noreferrer">
+                      <Heading as="h6" className="!text-white-A700">
+                        Blog
                       </Heading>
                     </a>
                     <a href="#">

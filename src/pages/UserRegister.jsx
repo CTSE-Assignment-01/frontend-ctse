@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
-const API_BASE = "http://localhost:4000";
+const API_BASE = "http://localhost:5173";
 
 const UserRegister = () => {
 

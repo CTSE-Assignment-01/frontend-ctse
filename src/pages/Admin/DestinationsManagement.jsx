@@ -121,6 +121,9 @@ const DestinationsManagement = () => {
             onConfirm={() => handleDeleteDestination(record._id)}
             okText="Yes"
             cancelText="No"
+            okButtonProps={{ 
+              style: { backgroundColor: '#1890ff', borderColor: '#1890ff' } 
+            }}
           >
             <Button danger>Delete</Button>
           </Popconfirm>
@@ -148,6 +151,9 @@ const DestinationsManagement = () => {
         visible={visible}
         onOk={handleFormSubmit}
         onCancel={handleCancel}
+        okButtonProps={{ 
+          style: { backgroundColor: '#1890ff', borderColor: '#1890ff' } 
+        }}
       >
         <Form form={form} layout="vertical">
           <Form.Item

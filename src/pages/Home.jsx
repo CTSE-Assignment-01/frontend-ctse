@@ -18,6 +18,11 @@ const Home = () => {
           </Link>
         </li>
         <li style={{ marginBottom: "10px" }}>
+          <Link to="/blog" style={{ color: "#87CEFA", textDecoration: "none" }}>
+            Blog
+          </Link>
+        </li>
+        <li style={{ marginBottom: "10px" }}>
           <Link to="/book" style={{ color: "#87CEFA", textDecoration: "none" }}>
             Book
           </Link>
