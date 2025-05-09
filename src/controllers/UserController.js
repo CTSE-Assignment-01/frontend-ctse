@@ -1,5 +1,8 @@
 import API from "constants";
 
+const API_WITH_PORT = {...API};
+API_WITH_PORT.defaults.baseURL = `${API.defaults.baseURL}:4002`;
+
 const token = localStorage.getItem("token");
 
 export const registerUser = (userData) => API.post("/users/register", userData);

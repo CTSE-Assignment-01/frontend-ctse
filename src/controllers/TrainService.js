@@ -1,5 +1,8 @@
 import API from "constants";
 
+const API_WITH_PORT = {...API};
+API_WITH_PORT.defaults.baseURL = `${API.defaults.baseURL}:4004`;
+
 const token = localStorage.getItem("token");
 
 // Function to create headers with the token
