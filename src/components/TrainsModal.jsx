@@ -21,10 +21,8 @@ const TrainsModal = () => {
     try {
       const response = await getTrains();
       setTrains(response.data);
-      setLoading(false);
     } catch (error) {
       console.error("Error fetching trains:", error);
-      setLoading(false);
     }
   };
 

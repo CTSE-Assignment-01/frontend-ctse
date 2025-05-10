@@ -65,11 +65,11 @@ function Blog() {
                   Home
                 </a>
                 <a href="/blog" className="inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 text-sm font-medium text-gray-900">
-                  Blog
-                </a>
-                <a href="/destinations" className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
                   Destinations
                 </a>
+                {/* <a href="/destinations" className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                  Destinations
+                </a> */}
                 <a href="/about" className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
                   About Us
                 </a>

@@ -1,7 +1,9 @@
+import axios from "axios";
 import API from "constants";
 
-const API_WITH_PORT = {...API};
-API_WITH_PORT.defaults.baseURL = `${API.defaults.baseURL}:4003`;
+const API_WITH_PORT = axios.create({
+  baseURL: `${API.defaults.baseURL}:4003`, 
+});
 
 const token = localStorage.getItem("token");
 
@@ -14,11 +16,11 @@ const createHeaders = () => ({
 
 // Add token to headers for requests
 export const createBooking = (bookingData) =>
-  API.post("/bookings/", bookingData, createHeaders());
-export const getBookings = () => API.get("/bookings/", createHeaders());
+  API_WITH_PORT.post("/bookings/", bookingData, createHeaders());
+export const getBookings = () => API_WITH_PORT.get("/bookings/", createHeaders());
 export const getBookingById = (id) =>
-  API.get(`/bookings/${id}`, createHeaders());
+  API_WITH_PORT.get(`/bookings/${id}`, createHeaders());
 export const updateBooking = (id, updatedBooking) =>
-  API.put(`/bookings/${id}`, updatedBooking, createHeaders());
+  API_WITH_PORT.put(`/bookings/${id}`, updatedBooking, createHeaders());
 export const deleteBooking = (id) =>
-  API.delete(`/bookings/${id}`, createHeaders());
+  API_WITH_PORT.delete(`/bookings/${id}`, createHeaders());
